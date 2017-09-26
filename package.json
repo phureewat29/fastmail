@@ -1,0 +1,33 @@
+{
+  "name": "fastmails",
+  "version": "1.0.0",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha tests/**/*.js",
+    "test:watch": "mocha tests/**/*.js --watch",
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "author": {
+    "name": "Phureewat Aphibansri",
+    "email": "a.phureewat@gmail.com"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 8.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.6.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^3.5.2"
+  },
+  "dependencies": {
+    "moment": "^2.18.1"
+  }
+}
