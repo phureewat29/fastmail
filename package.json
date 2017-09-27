@@ -1,13 +1,14 @@
 {
-  "name": "fastmails",
+  "name": "fastmail",
   "version": "1.0.0",
   "private": true,
-  "main": "app.js",
+  "main": "api.js",
   "scripts": {
-    "test": "mocha tests/**/*.js",
-    "test:watch": "mocha tests/**/*.js --watch",
-    "dev": "nodemon app.js",
-    "start": "node app.js"
+    "start": "concurrently \"npm run api\" \"npm run client\"",
+    "api": "node api.js",
+    "test": "mocha",
+    "client": "node client.js",
+    "lint": "eslint ."
   },
   "author": {
     "name": "Phureewat Aphibansri",
@@ -18,16 +19,24 @@
     "node": ">= 8.0"
   },
   "devDependencies": {
+    "babel-eslint": "^8.0.1",
     "chai": "^4.1.2",
+    "concurrently": "^3.5.0",
     "eslint": "^4.6.1",
     "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-react": "^5.0.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
-    "mocha": "^3.5.2"
+    "mocha": "^3.5.2",
+    "supertest": "^3.0.0"
   },
   "dependencies": {
-    "moment": "^2.18.1"
+    "dotenv": "^4.0.0",
+    "express": "^4.15.5",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "mongodb": "^2.2.31"
   }
 }
