@@ -8,6 +8,7 @@ class App extends Component {
   render () {
     return (
       <div className='App container'>
+        <h1 className='center'>FastMail</h1>
         <EmailForm />
         <hr />
         <HistorySearch />
