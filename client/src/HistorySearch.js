@@ -32,8 +32,8 @@ class HistorySearch extends React.Component {
       .orderBy('created_at', 'desc')
       .map(history => (
         <tr key={history._id}>
-          <td>{moment(history.created_at).calendar()}</td>
           <td>{history.to}</td>
+          <td>{moment(history.created_at).calendar()}</td>
           <td>{_.truncate(history.subject, { length: 20 })}</td>
           <td>{_.truncate(history.message, { length: 50 })}</td>
         </tr>
@@ -54,8 +54,8 @@ class HistorySearch extends React.Component {
           <table >
             <thead>
               <tr>
-                <th>Timestamp</th>
                 <th>To</th>
+                <th>Timestamp</th>
                 <th>Subject</th>
                 <th>Message</th>
               </tr>

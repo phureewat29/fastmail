@@ -1,11 +1,18 @@
 {
-  "extends": [ "standard", "standard-react" ],
+  "extends": [ "eslint:recommended", "plugin:react/recommended", "standard" ],
+  "plugins": [ "react" ],
   "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": { "jsx": true }
+  },
   "env": {
       "node": true,
       "mocha": true
   },
   "globals": {
     "fetch": true
+  },
+  "rules": {
+    "no-console": 0
   }
 }

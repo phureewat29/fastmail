@@ -19,18 +19,18 @@ class EmailForm extends React.Component {
 
   sendFormData () {
     const formData = {
-      subject: this.refs.subject.value,
-      to: this.refs.to.value,
-      message: this.refs.message.value
+      subject: this.subject.value,
+      to: this.to.value,
+      message: this.message.value
     }
     Client.sendMail(formData, (res) => {
       this.setState({
         sending: false,
         message: res.message
       })
-      this.refs.subject.value = ''
-      this.refs.to.value = ''
-      this.refs.message.value = ''
+      this.subject.value = ''
+      this.to.value = ''
+      this.message.value = ''
     })
   }
 
@@ -43,7 +43,7 @@ class EmailForm extends React.Component {
             type='text'
             required
             placeholder='Subject...'
-            ref='subject'
+            ref={ c => { this.subject = c }}
             id='subject'
           />
 
@@ -52,7 +52,7 @@ class EmailForm extends React.Component {
             type='email'
             required
             placeholder='Email...'
-            ref='to'
+            ref={ c => { this.to = c }}
             id='to'
           />
 
@@ -61,7 +61,7 @@ class EmailForm extends React.Component {
             placeholder='Message...'
             required
             id='message'
-            ref='message'
+            ref={ c => { this.message = c }}
           />
 
           <input

@@ -5213,12 +5213,6 @@ react-scripts@1.0.14:
   optionalDependencies:
     fsevents "1.1.2"
 
-react-validify@^2.0.8:
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/react-validify/-/react-validify-2.0.8.tgz#7df1ee9175557ea528ad03abfe5b374227eacc02"
-  dependencies:
-    validatorjs "^3.13.3"
-
 "react@^15 || ^16", react@^16.0.0:
   version "16.0.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.0.0.tgz#ce7df8f1941b036f02b2cca9dbd0cb1f0e855e2d"
@@ -6308,10 +6302,6 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "~1.0.0"
     spdx-expression-parse "~1.0.0"
-
-validatorjs@^3.13.3:
-  version "3.13.5"
-  resolved "https://registry.yarnpkg.com/validatorjs/-/validatorjs-3.13.5.tgz#4013c71122ef3ef83ba3cb81b270d8f0217a7658"
 
 vary@~1.1.1:
   version "1.1.2"
