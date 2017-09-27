@@ -1,0 +1,7 @@
+{
+  "short_name": "FastMail",
+  "name": "Fastest email service provider",
+  "icons": [],
+  "start_url": "./index.html",
+  "display": "standalone"
+}
