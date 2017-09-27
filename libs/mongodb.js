@@ -2,7 +2,7 @@ const mongodb = require('mongodb')
 let db
 
 async function connect () {
-  const url = process.env.MONGO_URL || 'mongodb://localhost:27017/fastmail'
+  const url = process.env.MONGODB_URI || 'mongodb://localhost:27017/fastmail'
   process.on('SIGINT', close).on('SIGTERM', close)
   return new Promise((resolve, reject) => {
     mongodb.MongoClient.connect(url, (err, res) => {
