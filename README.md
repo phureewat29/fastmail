@@ -54,6 +54,4 @@ __Note:__ Most of the source code inside this project are written by myself. But
 | **api.js**            | Entry file, map all routes to services and handle all express configuration.                            |
 | **client.js**         | Just a proxy script command to client.                            |
 
-### Todos
-
 
