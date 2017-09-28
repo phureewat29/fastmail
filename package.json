@@ -6,7 +6,7 @@
   "scripts": {
     "start": "concurrently \"npm run api\" \"npm run client\"",
     "api": "node api.js",
-    "test": "mocha",
+    "test": "NODE_ENV=test mocha",
     "client": "node client.js",
     "lint": "eslint ."
   },
@@ -30,6 +30,7 @@
     "eslint-plugin-react": "^7.4.0",
     "eslint-plugin-standard": "^3.0.1",
     "mocha": "^3.5.2",
+    "sinon": "^4.0.0",
     "supertest": "^3.0.0"
   },
   "dependencies": {

@@ -1,6 +1,7 @@
+const Config = require('../config')
 const mailgun = require('mailgun-js')({
-  apiKey: process.env.MAILGUN_API_KEY,
-  domain: process.env.MAILGUN_DOMAIN
+  apiKey: Config.MAILGUN_API_KEY,
+  domain: Config.MAILGUN_DOMAIN
 })
 
 function send ({ to, subject, message }) {
@@ -8,7 +9,7 @@ function send ({ to, subject, message }) {
     to,
     subject,
     text: message,
-    from: `${process.env.SENDER_NAME} <${process.env.SENDER_EMAIL}>`
+    from: `${Config.SENDER_NAME} <${Config.SENDER_EMAIL}>`
   }
   return mailgun.messages().send(data)
 }

@@ -1,10 +1,10 @@
 const _ = require('lodash')
 const mongodb = require('../libs/mongodb')
-const sendgrid = require('../libs/sendgrid')
-const mailgun = require('../libs/mailgun')
+const Sendgrid = require('../libs/sendgrid')
+const Mailgun = require('../libs/mailgun')
 
 /* All email providers. */
-const MAIL_PROVIDERS = [ mailgun, sendgrid ]
+const MAIL_PROVIDERS = [ Mailgun, Sendgrid ]
 
 /** 
  * POST: /mail
@@ -49,4 +49,4 @@ async function sendMail ({ subject, to, message }, providers = MAIL_PROVIDERS) {
   return isSuccess
 }
 
-module.exports = handler
+module.exports = { sendMail, handler }

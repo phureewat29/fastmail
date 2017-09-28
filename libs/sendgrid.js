@@ -1,5 +1,6 @@
+const Config = require('../config')
 const sendgrid = require('@sendgrid/mail')
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY)
+sendgrid.setApiKey(Config.SENDGRID_API_KEY)
 
 function send ({ to, subject, message }) {
   const data = {
@@ -7,8 +8,8 @@ function send ({ to, subject, message }) {
     subject,
     text: message,
     from: {
-      email: process.env.SENDER_EMAIL,
-      name: process.env.SENDER_NAME
+      email: Config.SENDER_EMAIL,
+      name: Config.SENDER_NAME
     }
   }
   return sendgrid.send(data)

@@ -1,19 +1,13 @@
 global.Promise = require('bluebird')
 
-const express = require('express')
-const bodyParser = require('body-parser')
-const assert = require('assert')
-const mongodb = require('./libs/mongodb')
-
 /* Load environment variables from .env file */
 require('dotenv').load({ silent: true })
 
+const express = require('express')
+const bodyParser = require('body-parser')
+const mongodb = require('./libs/mongodb')
+
 /* Assertion for secrets from environment variables. */
-assert(process.env.MAILGUN_API_KEY)
-assert(process.env.MAILGUN_DOMAIN)
-assert(process.env.SENDGRID_API_KEY)
-assert(process.env.SENDER_EMAIL)
-assert(process.env.SENDER_NAME)
 
 /* Create Express server */
 const app = express()
@@ -31,8 +25,8 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 /* Application routing */
-app.get('/history', require('./services/history'))
-app.post('/mail', require('./services/mail'))
+app.get('/history', require('./services/history').handler)
+app.post('/mail', require('./services/mail').handler)
 
 /* Start Express server. */
 app.set('port', process.env.PORT || '4000')
