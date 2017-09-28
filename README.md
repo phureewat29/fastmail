@@ -42,7 +42,7 @@ yarn test
 
 ## Project Structure
 
-__Note:__ Most of the source code inside this project are written by myself. But have well code structure, I think :-) which you will understand by just navigate and read the function names and comments. These below is list of important files in this application.
+__Note:__ Most of the source code inside this project are written by myself. But have well code structure, I think :-) which you will understand by just navigate through functions and code comments. These below is list of important files in this application.
 
 | Name                               | Description                                                  |
 | ---------------------------------- | ------------------------------------------------------------ |
