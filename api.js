@@ -7,8 +7,6 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const mongodb = require('./libs/mongodb')
 
-/* Assertion for secrets from environment variables. */
-
 /* Create Express server */
 const app = express()
 
